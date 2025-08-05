@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Translation App</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <script type="module" src="/src/main.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>🌐 AI Translation App</h1>
+        <p>Translate English text to Hindi using AI</p>
+      </header>
+
+      <main class="translation-container">
+        <div class="input-section">
+          <label for="input">Enter text to translate:</label>
+          <div class="input-group">
+            <textarea
+              id="input"
+              placeholder="Type your English text here..."
+              rows="4"
+              maxlength="1000"
+            ></textarea>
+            <div class="char-counter"><span id="char-count">0</span>/1000</div>
+          </div>
+          <button type="button" id="submit" class="submit-btn">
+            <span class="btn-text">Translate</span>
+            <div class="loading-spinner" id="loading-spinner"></div>
+          </button>
+        </div>
+
+        <div class="output-section">
+          <label>Translation:</label>
+          <div class="response-container">
+            <div id="response" class="response-area">
+              <div class="placeholder">
+                <p>Your translation will appear here...</p>
+              </div>
+            </div>
+            <button id="copy-btn" class="copy-btn" style="display: none">
+              📋 Copy
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>Powered by LangChain & Ollama</p>
+      </footer>
+    </div>
+  </body>
+</html>
